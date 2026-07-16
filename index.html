@@ -58,11 +58,9 @@
                     <span>discord.js</span>
                 </div>
                 <div class="project-links">
-                    
                     <a href="https://discord.gg/Gwbhr44QfS" target="_blank" class="link-btn accent">Ver bot en su Discord</a>
                 </div>
             </div>
-
 
             <div class="project-card" data-category="web">
                 <h3 class="project-title">Landing Page para Freelance</h3>
@@ -73,13 +71,12 @@
                     <span>JavaScript</span>
                 </div>
                 <div class="project-links">
-                    
                     <a href="#" target="_blank" class="link-btn accent">Demo en vivo</a>
                 </div>
             </div>
 
-            <div class="project-card" data-category="bot">
-                <h3 class="project-title">Bot espia para Discord</h3>
+            <div class="project-card" data-category="bots">
+                <h3 class="project-title">Bot espía para Discord</h3>
                 <p class="project-description">Un bot de Discord diseñado para recopilar información de los usuarios y canales, con un sistema de logging avanzado.</p>
                 <div class="project-tech">
                     <span>Discord.js</span>
@@ -87,11 +84,9 @@
                     <span>MongoDB</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/" target="_blank" class="link-btn">Código (GitHub Privado)</a>
-                    
+                    <a href="https://github.com/ELMRX" target="_blank" class="link-btn">Código (GitHub Privado)</a>
                 </div>
             </div>
-
 
             <div class="project-card" data-category="fullstack">
                 <h3 class="project-title">Tier List de Minecraft</h3>
@@ -102,24 +97,38 @@
                     <span>Express</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/" target="_blank" class="link-btn">Código (GitHub Privado)</a>
+                    <a href="https://github.com/ELMRX" target="_blank" class="link-btn">Código (GitHub Privado)</a>
                 </div>
             </div>
 
         </div>
-
-        
     </section>
 
+    <!-- Sección de Contacto Unificada -->
     <footer id="contact" class="footer">
         <div class="footer-container">
             <h2>¿Tienes algún proyecto en mente?</h2>
             <p>Estoy disponible para proyectos freelance, diseño de páginas web funcionales y desarrollo de bots a medida para Discord.</p>
-            <div class="contact-links">
-                <a href="mailto:ramiroalarcon414@gmail.com" class="contact-btn">Enviar Correo</a>
-                <a href="https://discord.com/1008794684958703769" target="_blank" class="contact-btn discord">Contacto Discord</a>
+            
+            <!-- Formulario de contacto integrado -->
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="form-name" name="name" placeholder="Tu Nombre / Discord Tag" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="form-email" name="email" placeholder="Tu Correo Electrónico" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="form-message" name="message" placeholder="Cuéntame sobre tu proyecto o bot..." required></textarea>
+                </div>
+                <button type="submit" id="submit-btn" class="contact-btn">Enviar Mensaje 🚀</button>
+            </form>
+
+            <div class="contact-links" style="margin-top: 30px;">
+                <a href="https://discord.com/users/1008794684958703769" target="_blank" class="contact-btn discord">Mi Perfil de Discord</a>
             </div>
-            <p class="copyright">&copy; 2026 Ramiro Alarcón. Todos los derechos reservados.</p>
+            
+            <p class="copyright" style="margin-top: 40px;">&copy; 2026 Ramiro Alarcón. Todos los derechos reservados.</p>
         </div>
     </footer>
 
