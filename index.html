@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramiro Alarcón | Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Ramiro.dev</a>
+            <div class="nav-links">
+                <a href="#about">Sobre mí</a>
+                <a href="#projects">Proyectos</a>
+                <a href="#contact">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="about" class="hero">
+        <div class="hero-content">
+            <h1>Ramiro Alarcón</h1>
+            <p class="subtitle">Desarrollador Web Freelance & Creador de Bots de Discord</p>
+            <div class="tech-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Node.js</span>
+                <span>React</span>
+                <span>MongoDB</span>
+                <span>Python</span>
+                <span>C</span>
+                <span>C++</span>
+                <span>Discord.js</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="projects" class="portfolio-section">
+        <h2 class="section-title">Mis Proyectos</h2>
+        
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="web">Webs / Frontend</button>
+            <button class="filter-btn" data-filter="fullstack">Fullstack</button>
+            <button class="filter-btn" data-filter="bots">Bots / Backend</button>
+        </div>
+
+        <div class="projects-grid">
+
+            <div class="project-card" data-category="bots">
+                <h3 class="project-title">Bot de Discord avanzado para soporte</h3>
+                <p class="project-description">Un bot de Discord robusto diseñado para gestionar de forma eficiente tickets de soporte técnico, moderación de canales y atención al usuario.</p>
+                <div class="project-tech">
+                    <span>Node.js</span>
+                    <span>discord.js</span>
+                </div>
+                <div class="project-links">
+                    
+                    <a href="https://discord.gg/Gwbhr44QfS" target="_blank" class="link-btn accent">Ver bot en su Discord</a>
+                </div>
+            </div>
+
+
+            <div class="project-card" data-category="web">
+                <h3 class="project-title">Landing Page para Freelance</h3>
+                <p class="project-description">Sitio web responsivo y optimizado creado desde cero con HTML semántico y CSS moderno para promocionar servicios profesionales.</p>
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <div class="project-links">
+                    
+                    <a href="#" target="_blank" class="link-btn accent">Demo en vivo</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="bot">
+                <h3 class="project-title">Bot espia para Discord</h3>
+                <p class="project-description">Un bot de Discord diseñado para recopilar información de los usuarios y canales, con un sistema de logging avanzado.</p>
+                <div class="project-tech">
+                    <span>Discord.js</span>
+                    <span>Node.js</span>
+                    <span>MongoDB</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/" target="_blank" class="link-btn">Código (GitHub Privado)</a>
+                    
+                </div>
+            </div>
+
+
+            <div class="project-card" data-category="fullstack">
+                <h3 class="project-title">Tier List de Minecraft</h3>
+                <p class="project-description">Aplicación web dinámica que permite conectar bot de discord con una base de datos MongoDB.</p>
+                <div class="project-tech">
+                    <span>React</span>
+                    <span>MongoDB</span>
+                    <span>Express</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/" target="_blank" class="link-btn">Código (GitHub Privado)</a>
+                </div>
+            </div>
+
+        </div>
+
+        
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="footer-container">
+            <h2>¿Tienes algún proyecto en mente?</h2>
+            <p>Estoy disponible para proyectos freelance, diseño de páginas web funcionales y desarrollo de bots a medida para Discord.</p>
+            <div class="contact-links">
+                <a href="mailto:tu-correo@gmail.com" class="contact-btn">Enviar Correo</a>
+                <a href="https://discord.com/" target="_blank" class="contact-btn discord">Contacto Discord</a>
+            </div>
+            <p class="copyright">&copy; 2026 Ramiro Alarcón. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
