@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paquetes de Desarrollo Web</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">MisterX/DEV</a>
+            <div class="nav-links">
+                <a href="index.html#about">Sobre mí</a>
+                <a href="index.html#projects">Proyectos</a>
+                <a href="index.html#contact">Contacto</a>
+                <a href="paquetes.html" class="accent">Paquetes</a>
+            </div>
+        </div>
+    </nav>
+
+  <main>
+    <section id="paquetes" class="portfolio-section">
+        <h2 class="section-title">Paquetes de Desarrollo Web</h2>
+        
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="todos">Todos</button>      
+            <button class="filter-btn" data-filter="landing">Landing Page</button>
+            <button class="filter-btn" data-filter="corporativa">Web Corporativa</button>
+            <button class="filter-btn" data-filter="fullstack">Web App / Fullstack</button>
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- Paquete 1: Landing Page -->
+            <div class="project-card" data-category="landing">
+                <h3 class="project-title">Landing Page (Básico)</h3>
+                <p class="project-description">Ideal para profesionales independientes o negocios locales. Sitio fijo de 1 página, optimizado, responsivo y diseñado para convertir visitas en clientes.</p>
+                <div class="project-tech">
+                    <span>Figma</span>
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                </div>
+                <div class="project-links">
+                    <button class="link-btn accent btn-cotizar-modal" data-paquete="Landing Page (Básico)">Cotizar paquete</button>
+                </div>
+            </div>
+
+            <!-- Paquete 2: Web Corporativa -->
+            <div class="project-card" data-category="corporativa">
+                <h3 class="project-title">Web Corporativa (Intermedio)</h3>
+                <p class="project-description">Sitio multipágina (hasta 5 secciones) con UI/UX a medida, componentes dinámicos, integración de redes sociales y optimización SEO On-Page básica.</p>
+                <div class="project-tech">
+                    <span>Figma (UX/UI)</span>
+                    <span>React</span>
+                    <span>HTML5/CSS3</span>
+                    <span>SEO On-Page</span>
+                </div>
+                <div class="project-links">
+                    <button class="link-btn accent btn-cotizar-modal" data-paquete="Web Corporativa (Intermedio)">Cotizar paquete</button>
+                </div>
+            </div>
+
+            <!-- Paquete 3: Web App / Fullstack -->
+            <div class="project-card" data-category="fullstack">
+                <h3 class="project-title">Web App / Full Stack (Avanzado)</h3>
+                <p class="project-description">Aplicación web a medida con el stack MERN. Incluye sistema de usuarios, panel de administración (Dashboard), base de datos y API RESTful.</p>
+                <div class="project-tech">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>Express</span>
+                    <span>MongoDB</span>
+                </div>
+                <div class="project-links">
+                    <button class="link-btn accent btn-cotizar-modal" data-paquete="Web App / Full Stack (Avanzado)">Cotizar paquete</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 MisterX/DEV</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+<div id="modal-cotizar" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+        <button id="close-modal" class="close-btn">&times;</button>
+        <h3 class="section-title" style="font-size: 1.5rem; margin-bottom: 0.5rem;">Confirmar Pedido</h3>
+        <p id="modal-paquete-nombre" style="color: #00f2fe; font-weight: bold; margin-bottom: 1.5rem; text-align: center;"></p>
+        
+        <form id="modal-contact-form">
+            <input type="hidden" id="modal-form-paquete" name="paquete">
+            
+            <div style="margin-bottom: 1rem;">
+                <input type="text" id="modal-form-name" placeholder="Tu Nombre *" required style="width: 100%; padding: 0.8rem; border-radius: 5px; border: 1px solid #333; background: #111; color: #fff;">
+            </div>
+            
+            <div style="margin-bottom: 1rem;">
+                <input type="email" id="modal-form-email" placeholder="Tu Correo Electrónico *" required style="width: 100%; padding: 0.8rem; border-radius: 5px; border: 1px solid #333; background: #111; color: #fff;">
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+                <textarea id="modal-form-message" rows="4" placeholder="Detalles adicionales sobre tu proyecto..." style="width: 100%; padding: 0.8rem; border-radius: 5px; border: 1px solid #333; background: #111; color: #fff; resize: vertical;"></textarea>
+            </div>
+
+            <button type="submit" id="modal-submit-btn" class="link-btn accent" style="width: 100%; cursor: pointer;">Enviar Pedido 🚀</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

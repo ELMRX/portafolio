@@ -12,8 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             projectCards.forEach(card => {
                 const cardCategory = card.getAttribute('data-category');
-                
-                if (filterValue === 'all' || cardCategory === filterValue) {
+                if (filterValue === 'all' || filterValue === 'todos' || cardCategory === filterValue) {
                     card.style.display = 'flex';
                 } else {
                     card.style.display = 'none';
@@ -23,38 +22,65 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// --- SISTEMA DE CONTACTO (CORREO Y DISCORD WEBHOOK) ---
-const contactForm = document.getElementById('contact-form');
-const submitBtn = document.getElementById('submit-btn');
+// --- LÓGICA DE LA VENTANA EMERGENTE (MODAL) ---
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('modal-cotizar');
+    const closeModalBtn = document.getElementById('close-modal');
+    const btnCotizarList = document.querySelectorAll('.btn-cotizar-modal');
+    const modalPaqueteNombre = document.getElementById('modal-paquete-nombre');
+    const modalInputPaquete = document.getElementById('modal-form-paquete');
 
-if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
+    // Abrir Modal al hacer clic en Cotizar
+    btnCotizarList.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const paquete = btn.getAttribute('data-paquete');
+            modalPaqueteNombre.innerText = `Paquete: ${paquete}`;
+            modalInputPaquete.value = paquete;
+            modal.style.display = 'flex';
+        });
+    });
+
+    // Cerrar Modal con la X o clic fuera del recuadro
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', () => modal.style.display = 'none');
+    }
+
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) modal.style.display = 'none';
+    });
+});
+
+// --- ENVÍO DEL FORMULARIO DEL MODAL (DISCORD & CORREO) ---
+const modalForm = document.getElementById('modal-contact-form');
+const modalSubmitBtn = document.getElementById('modal-submit-btn');
+
+if (modalForm) {
+    modalForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
-        // Cambiar el botón a estado "Cargando"
-        submitBtn.innerText = "Enviando...";
-        submitBtn.disabled = true;
+        modalSubmitBtn.innerText = "Enviando...";
+        modalSubmitBtn.disabled = true;
 
-        const name = document.getElementById('form-name').value;
-        const email = document.getElementById('form-email').value;
-        const message = document.getElementById('form-message').value;
+        const paquete = document.getElementById('modal-form-paquete').value;
+        const name = document.getElementById('modal-form-name').value;
+        const email = document.getElementById('modal-form-email').value;
+        const message = document.getElementById('modal-form-message').value;
 
-      
-        const discordWebhookUrl = 'https://discord.com/api/webhooks/1527446392786649209/gwDo9mJkT1RPEMhbkp9QLeGuOy-e5VBUzdLdo4GBZdeoCLN3i9FWHyJizAnXX47UhECR';
+        const discordWebhookUrl = 'https://discord.com/api/webhooks/1528575837685809293/75dvRv5Sz8dSynz1eas7lOtGJKawoFcxVxkxyJshXfBGpcB55IODnO4IRw6ZIyU0j0Hd';
 
-       
         const payload = {
             embeds: [
                 {
-                    title: "📬 ¡Nuevo mensaje desde tu Portafolio!",
-                    color: 3891446, 
+                    title: "📦 ¡Nueva Solicitud de Paquete Web!",
+                    color: 65535, 
                     fields: [
+                        { name: "📋 Paquete", value: paquete, inline: false },
                         { name: "👤 Cliente", value: name, inline: true },
                         { name: "📧 Correo", value: email, inline: true },
-                        { name: "💬 Mensaje", value: message }
+                        { name: "💬 Detalles", value: message || "Sin detalles adicionales." }
                     ],
                     timestamp: new Date().toISOString(),
-                    footer: { text: "Ramiro.dev Contact System" }
+                    footer: { text: "Ramiro.dev Paquetes System" }
                 }
             ]
         };
@@ -66,42 +92,38 @@ if (contactForm) {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
             });
-            if (discordResponse.ok) {
-                discordSuccess = true;
-            }
+            if (discordResponse.ok) discordSuccess = true;
         } catch (error) {
             console.error("Error al enviar a Discord:", error);
         }
 
-       
         let emailSuccess = false;
         try {
             const emailResponse = await fetch('https://formsubmit.co/ajax/ramiroalarcon414@gmail.com', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                 body: JSON.stringify({
+                    Paquete: paquete,
                     Nombre: name,
                     Email: email,
                     Mensaje: message,
-                    _subject: `Nuevo contacto de ${name} desde tu Web`
+                    _subject: `Nueva cotización de paquete: ${paquete}`
                 })
             });
-            if (emailResponse.ok) {
-                emailSuccess = true;
-            }
+            if (emailResponse.ok) emailSuccess = true;
         } catch (error) {
             console.error("Error al enviar el correo:", error);
         }
 
-        
-        submitBtn.disabled = false;
-        submitBtn.innerText = "Enviar Mensaje 🚀";
+        modalSubmitBtn.disabled = false;
+        modalSubmitBtn.innerText = "Enviar Pedido 🚀";
 
         if (discordSuccess || emailSuccess) {
-            alert("🎉 ¡Tu mensaje ha sido enviado con éxito! Te contactaré pronto.");
-            contactForm.reset();
+            alert("🎉 ¡Tu pedido ha sido enviado con éxito! Te contactaré muy pronto.");
+            modalForm.reset();
+            document.getElementById('modal-cotizar').style.display = 'none';
         } else {
-            alert("❌ Hubo un inconveniente al enviar tu mensaje. Por favor escríbeme directamente en Discord.");
+            alert("❌ Hubo un inconveniente. Por favor escríbeme directamente por Discord.");
         }
     });
 }
