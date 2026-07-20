@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paquetes de Desarrollo Web</title>
+  <title>Paquetes de Desarrollo | MisterX/DEV</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="pagina-paquetes">
 
+    <!-- NAVEGACIÓN -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">MisterX/DEV</a>
@@ -15,103 +16,378 @@
                 <a href="index.html#about">Sobre mí</a>
                 <a href="index.html#projects">Proyectos</a>
                 <a href="index.html#contact">Contacto</a>
-                <a href="paquetes.html" class="accent">Paquetes</a>
+                <a href="paquetes.html" class="accent shine-effect">Paquetes</a>
             </div>
         </div>
     </nav>
 
-  <main>
-    <section id="paquetes" class="portfolio-section">
-        <h2 class="section-title">Paquetes de Desarrollo Web</h2>
-        
-        <div class="filter-container">
-            <button class="filter-btn active" data-filter="todos">Todos</button>      
-            <button class="filter-btn" data-filter="landing">Landing Page</button>
-            <button class="filter-btn" data-filter="corporativa">Web Corporativa</button>
-            <button class="filter-btn" data-filter="fullstack">Web App / Fullstack</button>
-        </div>
-
-        <div class="projects-grid">
-
-            <!-- Paquete 1: Landing Page -->
-            <div class="project-card" data-category="landing">
-                <h3 class="project-title">Landing Page (Básico)</h3>
-                <p class="project-description">Ideal para profesionales independientes o negocios locales. Sitio fijo de 1 página, optimizado, responsivo y diseñado para convertir visitas en clientes.</p>
-                <div class="project-tech">
-                    <span>Figma</span>
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>JavaScript</span>
-                </div>
-                <div class="project-links">
-                    <button class="link-btn accent btn-cotizar-modal" data-paquete="Landing Page (Básico)">Cotizar paquete</button>
-                </div>
-            </div>
-
-            <!-- Paquete 2: Web Corporativa -->
-            <div class="project-card" data-category="corporativa">
-                <h3 class="project-title">Web Corporativa (Intermedio)</h3>
-                <p class="project-description">Sitio multipágina (hasta 5 secciones) con UI/UX a medida, componentes dinámicos, integración de redes sociales y optimización SEO On-Page básica.</p>
-                <div class="project-tech">
-                    <span>Figma (UX/UI)</span>
-                    <span>React</span>
-                    <span>HTML5/CSS3</span>
-                    <span>SEO On-Page</span>
-                </div>
-                <div class="project-links">
-                    <button class="link-btn accent btn-cotizar-modal" data-paquete="Web Corporativa (Intermedio)">Cotizar paquete</button>
-                </div>
-            </div>
-
-            <!-- Paquete 3: Web App / Fullstack -->
-            <div class="project-card" data-category="fullstack">
-                <h3 class="project-title">Web App / Full Stack (Avanzado)</h3>
-                <p class="project-description">Aplicación web a medida con el stack MERN. Incluye sistema de usuarios, panel de administración (Dashboard), base de datos y API RESTful.</p>
-                <div class="project-tech">
-                    <span>React</span>
-                    <span>Node.js</span>
-                    <span>Express</span>
-                    <span>MongoDB</span>
-                </div>
-                <div class="project-links">
-                    <button class="link-btn accent btn-cotizar-modal" data-paquete="Web App / Full Stack (Avanzado)">Cotizar paquete</button>
-                </div>
-            </div>
-
-        </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2026 MisterX/DEV</p>
-  </footer>
-
-  <script src="script.js"></script>
-
-<div id="modal-cotizar" class="modal-overlay" style="display: none;">
-    <div class="modal-content">
-        <button id="close-modal" class="close-btn">&times;</button>
-        <h3 class="section-title" style="font-size: 1.5rem; margin-bottom: 0.5rem;">Confirmar Pedido</h3>
-        <p id="modal-paquete-nombre" style="color: #00f2fe; font-weight: bold; margin-bottom: 1.5rem; text-align: center;"></p>
-        
-        <form id="modal-contact-form">
-            <input type="hidden" id="modal-form-paquete" name="paquete">
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <section id="paquetes" class="portfolio-section" style="padding-top: 120px;">
+            <h2 class="section-title">Paquetes de Desarrollo</h2>
             
-            <div style="margin-bottom: 1rem;">
-                <input type="text" id="modal-form-name" placeholder="Tu Nombre *" required style="width: 100%; padding: 0.8rem; border-radius: 5px; border: 1px solid #333; background: #111; color: #fff;">
-            </div>
-            
-            <div style="margin-bottom: 1rem;">
-                <input type="email" id="modal-form-email" placeholder="Tu Correo Electrónico *" required style="width: 100%; padding: 0.8rem; border-radius: 5px; border: 1px solid #333; background: #111; color: #fff;">
-            </div>
-
-            <div style="margin-bottom: 1rem;">
-                <textarea id="modal-form-message" rows="4" placeholder="Detalles adicionales sobre tu proyecto..." style="width: 100%; padding: 0.8rem; border-radius: 5px; border: 1px solid #333; background: #111; color: #fff; resize: vertical;"></textarea>
+            <!-- FILTROS (SIN "TODOS") -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="web">🌐 Desarrollo Web</button>
+                <button class="filter-btn" data-filter="bots">🤖 Bots de Discord</button>
+                <button class="filter-btn" data-filter="mobile">📱 Apps Móviles</button>
             </div>
 
-            <button type="submit" id="modal-submit-btn" class="link-btn accent" style="width: 100%; cursor: pointer;">Enviar Pedido 🚀</button>
-        </form>
-    </div>
-</div>
+            <div class="projects-grid">
+
+                <!-- ============================================ -->
+                <!-- 🌐 DESARROLLO WEB (3 paquetes) -->
+                <!-- ============================================ -->
+
+                <!-- Web Paquete 1: Landing Page -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image-container">
+                        <!-- 🔴 CAMBIA ESTA IMAGEN POR LA TUYA -->
+                        <img src="https://images.unsplash.com/photo-1581291518633-83b4eef7c3b0?w=600&h=350&fit=crop" 
+                             alt="Landing Page" class="project-image">
+                        <div class="project-image-overlay">
+                            <svg viewBox="0 0 24 24"><path d="M22 12l-10 7-10-7 10-7 10 7z" fill="white" opacity="0.8"/></svg>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-title">🌐 Landing Page (Básico)</h3>
+                        <p class="project-description">
+                            ✅ 1 página completa<br>
+                            ✅ Diseño responsive<br>
+                            ✅ Optimización SEO básica<br>
+                            ✅ Formulario de contacto<br>
+                            ✅ Hosting incluido (1 mes)<br>
+                            🎯 Ideal para: Negocios locales, profesionales independientes
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="link-btn accent btn-cotizar-modal" data-paquete="Landing Page (Básico)">
+                                Cotizar paquete 💰
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Paquete 2: Web Corporativa -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image-container">
+                        <!-- 🔴 CAMBIA ESTA IMAGEN POR LA TUYA -->
+                        <img src="https://images.unsplash.com/photo-1460925895917-af9ab1d1ea3e?w=600&h=350&fit=crop" 
+                             alt="Web Corporativa" class="project-image">
+                        <div class="project-image-overlay">
+                            <svg viewBox="0 0 24 24"><path d="M22 12l-10 7-10-7 10-7 10 7z" fill="white" opacity="0.8"/></svg>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-title">🌐 Web Corporativa (Intermedio)</h3>
+                        <p class="project-description">
+                            ✅ Hasta 5 secciones<br>
+                            ✅ Diseño UI/UX personalizado<br>
+                            ✅ Panel administrable básico<br>
+                            ✅ Integración redes sociales<br>
+                            ✅ SEO On-Page avanzado<br>
+                            🎯 Ideal para: Empresas, startups, marcas personales
+                        </p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Figma</span>
+                            <span>CSS3</span>
+                            <span>SEO</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="link-btn accent btn-cotizar-modal" data-paquete="Web Corporativa (Intermedio)">
+                                Cotizar paquete 💰
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Paquete 3: Web App Full Stack -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image-container">
+                        <!-- 🔴 CAMBIA ESTA IMAGEN POR LA TUYA -->
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=350&fit=crop" 
+                             alt="Web App Full Stack" class="project-image">
+                        <div class="project-image-overlay">
+                            <svg viewBox="0 0 24 24"><path d="M22 12l-10 7-10-7 10-7 10 7z" fill="white" opacity="0.8"/></svg>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-title">🌐 Web App Full Stack (Avanzado)</h3>
+                        <p class="project-description">
+                            ✅ Aplicación web completa<br>
+                            ✅ Sistema de usuarios y roles<br>
+                            ✅ Panel de administración<br>
+                            ✅ Base de datos (MongoDB/MySQL)<br>
+                            ✅ API RESTful<br>
+                            🎯 Ideal para: Plataformas web, SaaS, sistemas a medida
+                        </p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Express</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="link-btn accent btn-cotizar-modal" data-paquete="Web App Full Stack (Avanzado)">
+                                Cotizar paquete 💰
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================ -->
+                <!-- 🤖 BOTS DE DISCORD (3 paquetes) -->
+                <!-- ============================================ -->
+
+                <!-- Bot Paquete 1: Bot Básico -->
+                <div class="project-card" data-category="bots">
+                    <div class="project-image-container">
+                        <!-- 🔴 CAMBIA ESTA IMAGEN POR LA TUYA -->
+                        <img src="https://images.unsplash.com/photo-1611606063065-ee7946f0787a?w=600&h=350&fit=crop" 
+                             alt="Bot Básico Discord" class="project-image">
+                        <div class="project-image-overlay">
+                            <svg viewBox="0 0 24 24"><path d="M22 12l-10 7-10-7 10-7 10 7z" fill="white" opacity="0.8"/></svg>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-title">🤖 Bot de Discord (Básico)</h3>
+                        <p class="project-description">
+                            ✅ Comandos personalizados (hasta 10)<br>
+                            ✅ Sistema de bienvenida<br>
+                            ✅ Moderación básica (kick/ban)<br>
+                            ✅ Respuestas automáticas<br>
+                            ✅ Hosting 24/7 (1 mes)<br>
+                            🎯 Ideal para: Comunidades pequeñas, servidores de amigos
+                        </p>
+                        <div class="project-tech">
+                            <span>Node.js</span>
+                            <span>discord.js</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="link-btn accent btn-cotizar-modal" data-paquete="Bot de Discord (Básico)">
+                                Cotizar paquete 💰
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bot Paquete 2: Bot Intermedio -->
+                <div class="project-card" data-category="bots">
+                    <div class="project-image-container">
+                        <!-- 🔴 CAMBIA ESTA IMAGEN POR LA TUYA -->
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&h=350&fit=crop" 
+                             alt="Bot Intermedio Discord" class="project-image">
+                        <div class="project-image-overlay">
+                            <svg viewBox="0 0 24 24"><path d="M22 12l-10 7-10-7 10-7 10 7z" fill="white" opacity="0.8"/></svg>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-title">🤖 Bot de Discord (Intermedio)</h3>
+                        <p class="project-description">
+                            ✅ Comandos ilimitados<br>
+                            ✅ Sistema de tickets de soporte<br>
+                            ✅ Moderación avanzada con logs<br>
+                            ✅ Sistema de niveles/ranking<br>
+                            ✅ Base de datos para configuraciones<br>
+                            🎯 Ideal para: Comunidades medianas, servidores de gaming
+                        </p>
+                        <div class="project-tech">
+                            <span>Node.js</span>
+                            <span>discord.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="link-btn accent btn-cotizar-modal" data-paquete="Bot de Discord (Intermedio)">
+                                Cotizar paquete 💰
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bot Paquete 3: Bot Avanzado -->
+                <div class="project-card" data-category="bots">
+                    <div class="project-image-container">
+                        <!-- 🔴 CAMBIA ESTA IMAGEN POR LA TUYA -->
+                        <img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=600&h=350&fit=crop" 
+                             alt="Bot Avanzado Discord" class="project-image">
+                        <div class="project-image-overlay">
+                            <svg viewBox="0 0 24 24"><path d="M22 12l-10 7-10-7 10-7 10 7z" fill="white" opacity="0.8"/></svg>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-title">🤖 Bot de Discord (Avanzado)</h3>
+                        <p class="project-description">
+                            ✅ Dashboard web para administración<br>
+                            ✅ Sistema de economía virtual<br>
+                            ✅ Integración con APIs externas<br>
+                            ✅ Música 24/7 con playlists<br>
+                            ✅ Panel de estadísticas y analytics<br>
+                            🎯 Ideal para: Grandes comunidades, servidores profesionales
+                        </p>
+                        <div class="project-tech">
+                            <span>Node.js</span>
+                            <span>discord.js</span>
+                            <span>React</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="link-btn accent btn-cotizar-modal" data-paquete="Bot de Discord (Avanzado)">
+                                Cotizar paquete 💰
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================ -->
+                <!-- 📱 APPS MÓVILES (3 paquetes) -->
+                <!-- ============================================ -->
+
+                <!-- App Paquete 1: App Básica -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image-container">
+                        <!-- 🔴 CAMBIA ESTA IMAGEN POR LA TUYA -->
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=350&fit=crop" 
+                             alt="App Móvil Básica" class="project-image">
+                        <div class="project-image-overlay">
+                            <svg viewBox="0 0 24 24"><path d="M22 12l-10 7-10-7 10-7 10 7z" fill="white" opacity="0.8"/></svg>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-title">📱 App Móvil (Básica)</h3>
+                        <p class="project-description">
+                            ✅ App de 1-3 pantallas<br>
+                            ✅ Diseño responsive nativo<br>
+                            ✅ Publicación en 1 tienda<br>
+                            ✅ Icono y splash screen<br>
+                            ✅ Soporte técnico (1 mes)<br>
+                            🎯 Ideal para: MVP, apps informativas, catálogos
+                        </p>
+                        <div class="project-tech">
+                            <span>React Native</span>
+                            <span>Expo</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="link-btn accent btn-cotizar-modal" data-paquete="App Móvil (Básica)">
+                                Cotizar paquete 💰
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App Paquete 2: App Intermedia -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image-container">
+                        <!-- 🔴 CAMBIA ESTA IMAGEN POR LA TUYA -->
+                        <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?w=600&h=350&fit=crop" 
+                             alt="App Móvil Intermedia" class="project-image">
+                        <div class="project-image-overlay">
+                            <svg viewBox="0 0 24 24"><path d="M22 12l-10 7-10-7 10-7 10 7z" fill="white" opacity="0.8"/></svg>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-title">📱 App Móvil (Intermedia)</h3>
+                        <p class="project-description">
+                            ✅ App de 5-10 pantallas<br>
+                            ✅ Autenticación de usuarios<br>
+                            ✅ Base de datos en la nube<br>
+                            ✅ Notificaciones push<br>
+                            ✅ Publicación en App Store y Google Play<br>
+                            🎯 Ideal para: E-commerce, apps de servicios, redes sociales simples
+                        </p>
+                        <div class="project-tech">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="link-btn accent btn-cotizar-modal" data-paquete="App Móvil (Intermedia)">
+                                Cotizar paquete 💰
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App Paquete 3: App Avanzada -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image-container">
+                        <!-- 🔴 CAMBIA ESTA IMAGEN POR LA TUYA -->
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=350&fit=crop" 
+                             alt="App Móvil Avanzada" class="project-image">
+                        <div class="project-image-overlay">
+                            <svg viewBox="0 0 24 24"><path d="M22 12l-10 7-10-7 10-7 10 7z" fill="white" opacity="0.8"/></svg>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-title">📱 App Móvil (Avanzada)</h3>
+                        <p class="project-description">
+                            ✅ App multi-plataforma completa<br>
+                            ✅ Chat en tiempo real<br>
+                            ✅ Pasarela de pagos integrada<br>
+                            ✅ Geolocalización y mapas<br>
+                            ✅ Panel admin web incluido<br>
+                            🎯 Ideal para: Apps tipo Uber, marketplaces, plataformas completas
+                        </p>
+                        <div class="project-tech">
+                            <span>React Native</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Socket.io</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="link-btn accent btn-cotizar-modal" data-paquete="App Móvil (Avanzada)">
+                                Cotizar paquete 💰
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- MODAL DE COTIZACIÓN -->
+        <div id="modal-cotizar" class="modal-overlay" style="display: none;">
+            <div class="modal-content">
+                <button id="close-modal" class="close-btn">&times;</button>
+                <h3 class="section-title" style="font-size: 1.6rem; margin-bottom: 0.5rem;">Solicitar Cotización</h3>
+                <p id="modal-paquete-nombre" style="color: #00f2fe; font-weight: bold; margin-bottom: 1.5rem; text-align: center; font-size: 1.1rem;"></p>
+                
+                <form id="modal-contact-form">
+                    <input type="hidden" id="modal-form-paquete" name="paquete">
+                    
+                    <div style="margin-bottom: 1rem;">
+                        <input type="text" id="modal-form-name" placeholder="Tu Nombre *" required>
+                    </div>
+                    
+                    <div style="margin-bottom: 1rem;">
+                        <input type="email" id="modal-form-email" placeholder="Tu Correo Electrónico *" required>
+                    </div>
+
+                    <div style="margin-bottom: 1rem;">
+                        <input type="text" id="modal-form-discord" placeholder="Tu Discord (opcional)">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <textarea id="modal-form-message" rows="4" placeholder="Cuéntame los detalles de tu proyecto, ideas, presupuesto..."></textarea>
+                    </div>
+
+                    <button type="submit" id="modal-submit-btn" class="link-btn accent" style="width: 100%; cursor: pointer; padding: 1rem; font-size: 1.1rem;">
+                        Enviar Solicitud 🚀
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 MisterX/DEV. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
