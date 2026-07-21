@@ -1,393 +1,1049 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paquetes de Desarrollo | MisterX/DEV</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paquetes de Desarrollo | MisterX/DEV</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body class="pagina-paquetes">
 
-    <!-- NAVEGACIÓN -->
+    <!-- NAVBAR PREMIUM -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">MisterX/DEV</a>
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="logo-text-container">
+                    <span class="logo-text">MisterX</span>
+                    <span class="logo-accent">/DEV</span>
+                </div>
+            </div>
             <div class="nav-links">
-                <a href="index.html#about">Sobre mí</a>
-                <a href="index.html#projects">Proyectos</a>
-                <a href="index.html#contact">Contacto</a>
-                <a href="paquetes.html" class="accent shine-effect">Paquetes</a>
+                <a href="index.html#about" class="nav-link"><i class="fa-solid fa-user"></i> Sobre mí</a>
+                <a href="index.html#projects" class="nav-link"><i class="fa-solid fa-folder"></i> Proyectos</a>
+                <a href="index.html#contact" class="nav-link"><i class="fa-solid fa-envelope"></i> Contacto</a>
+                <a href="paquetes.html" class="nav-link nav-cta active"><i class="fa-solid fa-box"></i> Paquetes</a>
             </div>
         </div>
     </nav>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main>
-        <section id="paquetes" class="portfolio-section" style="padding-top: 120px;">
-            <h2 class="section-title">Paquetes de Desarrollo</h2>
-            
-            <!-- FILTROS (SIN "TODOS") -->
-            <div class="filter-container">
-                <button class="filter-btn active" data-filter="web">🌐 Desarrollo Web</button>
-                <button class="filter-btn" data-filter="bots">🤖 Bots de Discord</button>
-                <button class="filter-btn" data-filter="mobile">📱 Apps Móviles</button>
+    <!-- HERO PAQUETES -->
+    <section class="hero-paquetes">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fa-solid fa-crown"></i>
+                <span>Servicios Premium</span>
+            </div>
+            <h1 class="hero-title">
+                Paquetes de <span class="gradient-text">Desarrollo</span>
+            </h1>
+            <p class="hero-description">
+                Soluciones profesionales a tu medida. Desde landing pages hasta aplicaciones web completas y bots de Discord avanzados.
+            </p>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-card card-1">
+                <i class="fa-solid fa-globe"></i>
+                <span>Web</span>
+            </div>
+            <div class="floating-card card-2">
+                <i class="fa-brands fa-discord"></i>
+                <span>Bots</span>
+            </div>
+            <div class="floating-card card-3">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <span>Apps</span>
+            </div>
+            <div class="glowing-orb"></div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PAQUETES -->
+    <section id="paquetes" class="projects-section">
+        <div class="section-header">
+            <span class="section-badge">Servicios</span>
+            <h2 class="section-title">Elige tu <span class="gradient-text">Paquete Ideal</span></h2>
+            <p class="section-description">Planes flexibles para cada necesidad y presupuesto</p>
+        </div>
+
+        <!-- Filtros -->
+        <div class="filtros-grid">
+            <button class="btn-modo-premium activo" data-filter="web">
+                <div class="icono-wrapper"><i class="fa-solid fa-globe"></i></div>
+                <span>🌐 Desarrollo Web</span>
+            </button>
+            <button class="btn-modo-premium" data-filter="bots">
+                <div class="icono-wrapper"><i class="fa-brands fa-discord"></i></div>
+                <span>🤖 Bots de Discord</span>
+            </button>
+            <button class="btn-modo-premium" data-filter="mobile">
+                <div class="icono-wrapper"><i class="fa-solid fa-mobile-screen"></i></div>
+                <span>📱 Apps Móviles</span>
+            </button>
+        </div>
+
+        <!-- Grid de paquetes -->
+        <div class="projects-grid">
+
+            <!-- ============================================ -->
+            <!-- 🌐 DESARROLLO WEB -->
+            <!-- ============================================ -->
+
+            <!-- Web - Básico - $50 USD -->
+            <div class="project-card" data-category="web">
+                <div class="project-image-container">
+                    <img src="https://images.unsplash.com/photo-1581291518633-83b4eef7c3b0?w=600&h=350&fit=crop" 
+                         alt="Landing Page" class="project-image">
+                    <div class="project-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                    <div class="project-tier-badge tier-basico">BÁSICO</div>
+                </div>
+                <div class="project-card-content">
+                    <h3 class="project-title">🌐 Landing Page</h3>
+                    <div class="project-price">$50 <span>USD</span></div>
+                    <p class="project-description">
+                        Sitio web de 1 página optimizado para convertir visitantes en clientes. Diseño moderno y responsive.
+                    </p>
+                    <ul class="package-features">
+                        <li><i class="fa-solid fa-check"></i> 1 página completa</li>
+                        <li><i class="fa-solid fa-check"></i> Diseño responsive</li>
+                        <li><i class="fa-solid fa-check"></i> Optimización SEO básica</li>
+                        <li><i class="fa-solid fa-check"></i> Formulario de contacto</li>
+                        <li><i class="fa-solid fa-check"></i> Hosting incluido (1 mes)</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <button class="btn-primary btn-full btn-cotizar-modal" data-paquete="Landing Page" data-nivel="Básico" data-precio="50 USD">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Cotizar Paquete
+                            <span class="btn-shine"></span>
+                        </button>
+                    </div>
+                </div>
             </div>
 
-            <div class="projects-grid">
-
-                <!-- ============================================ -->
-                <!-- 🌐 DESARROLLO WEB (3 paquetes) -->
-                <!-- ============================================ -->
-
-                <!-- Web Paquete 1: Landing Page -->
-                <div class="project-card" data-category="web">
-                    <div class="project-image-container">
-                        <!-- 🔴 CAMBIA ESTA IMAGEN POR LA TUYA -->
-                        <img src="https://images.unsplash.com/photo-1581291518633-83b4eef7c3b0?w=600&h=350&fit=crop" 
-                             alt="Landing Page" class="project-image">
-                        <div class="project-image-overlay">
-                            <svg viewBox="0 0 24 24"><path d="M22 12l-10 7-10-7 10-7 10 7z" fill="white" opacity="0.8"/></svg>
-                        </div>
+            <!-- Web - Intermedio - $150 USD -->
+            <div class="project-card" data-category="web">
+                <div class="project-image-container">
+                    <img src="https://images.unsplash.com/photo-1460925895917-af9ab1d1ea3e?w=600&h=350&fit=crop" 
+                         alt="Web Corporativa" class="project-image">
+                    <div class="project-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
                     </div>
-                    <div class="project-card-content">
-                        <h3 class="project-title">🌐 Landing Page (Básico)</h3>
-                        <p class="project-description">
-                            ✅ 1 página completa<br>
-                            ✅ Diseño responsive<br>
-                            ✅ Optimización SEO básica<br>
-                            ✅ Formulario de contacto<br>
-                            ✅ Hosting incluido (1 mes)<br>
-                            🎯 Ideal para: Negocios locales, profesionales independientes
-                        </p>
-                        <div class="project-tech">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <button class="link-btn accent btn-cotizar-modal" data-paquete="Landing Page (Básico)">
-                                Cotizar paquete 💰
-                            </button>
-                        </div>
+                    <div class="project-tier-badge tier-intermedio">INTERMEDIO</div>
+                </div>
+                <div class="project-card-content">
+                    <h3 class="project-title">🌐 Web Corporativa</h3>
+                    <div class="project-price">$150 <span>USD</span></div>
+                    <p class="project-description">
+                        Sitio multipágina profesional con UI/UX personalizado y panel administrable básico.
+                    </p>
+                    <ul class="package-features">
+                        <li><i class="fa-solid fa-check"></i> Hasta 5 secciones</li>
+                        <li><i class="fa-solid fa-check"></i> Diseño UI/UX personalizado</li>
+                        <li><i class="fa-solid fa-check"></i> Panel administrable básico</li>
+                        <li><i class="fa-solid fa-check"></i> Integración redes sociales</li>
+                        <li><i class="fa-solid fa-check"></i> SEO On-Page avanzado</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Figma</span>
+                        <span>CSS3</span>
+                        <span>SEO</span>
+                    </div>
+                    <div class="project-links">
+                        <button class="btn-primary btn-full btn-cotizar-modal" data-paquete="Web Corporativa" data-nivel="Intermedio" data-precio="150 USD">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Cotizar Paquete
+                            <span class="btn-shine"></span>
+                        </button>
                     </div>
                 </div>
-
-                <!-- Web Paquete 2: Web Corporativa -->
-                <div class="project-card" data-category="web">
-                    <div class="project-image-container">
-                        <!-- 🔴 CAMBIA ESTA IMAGEN POR LA TUYA -->
-                        <img src="https://images.unsplash.com/photo-1460925895917-af9ab1d1ea3e?w=600&h=350&fit=crop" 
-                             alt="Web Corporativa" class="project-image">
-                        <div class="project-image-overlay">
-                            <svg viewBox="0 0 24 24"><path d="M22 12l-10 7-10-7 10-7 10 7z" fill="white" opacity="0.8"/></svg>
-                        </div>
-                    </div>
-                    <div class="project-card-content">
-                        <h3 class="project-title">🌐 Web Corporativa (Intermedio)</h3>
-                        <p class="project-description">
-                            ✅ Hasta 5 secciones<br>
-                            ✅ Diseño UI/UX personalizado<br>
-                            ✅ Panel administrable básico<br>
-                            ✅ Integración redes sociales<br>
-                            ✅ SEO On-Page avanzado<br>
-                            🎯 Ideal para: Empresas, startups, marcas personales
-                        </p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Figma</span>
-                            <span>CSS3</span>
-                            <span>SEO</span>
-                        </div>
-                        <div class="project-links">
-                            <button class="link-btn accent btn-cotizar-modal" data-paquete="Web Corporativa (Intermedio)">
-                                Cotizar paquete 💰
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Web Paquete 3: Web App Full Stack -->
-                <div class="project-card" data-category="web">
-                    <div class="project-image-container">
-                        <!-- 🔴 CAMBIA ESTA IMAGEN POR LA TUYA -->
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=350&fit=crop" 
-                             alt="Web App Full Stack" class="project-image">
-                        <div class="project-image-overlay">
-                            <svg viewBox="0 0 24 24"><path d="M22 12l-10 7-10-7 10-7 10 7z" fill="white" opacity="0.8"/></svg>
-                        </div>
-                    </div>
-                    <div class="project-card-content">
-                        <h3 class="project-title">🌐 Web App Full Stack (Avanzado)</h3>
-                        <p class="project-description">
-                            ✅ Aplicación web completa<br>
-                            ✅ Sistema de usuarios y roles<br>
-                            ✅ Panel de administración<br>
-                            ✅ Base de datos (MongoDB/MySQL)<br>
-                            ✅ API RESTful<br>
-                            🎯 Ideal para: Plataformas web, SaaS, sistemas a medida
-                        </p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                            <span>Express</span>
-                        </div>
-                        <div class="project-links">
-                            <button class="link-btn accent btn-cotizar-modal" data-paquete="Web App Full Stack (Avanzado)">
-                                Cotizar paquete 💰
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ============================================ -->
-                <!-- 🤖 BOTS DE DISCORD (3 paquetes) -->
-                <!-- ============================================ -->
-
-                <!-- Bot Paquete 1: Bot Básico -->
-                <div class="project-card" data-category="bots">
-                    <div class="project-image-container">
-                        <!-- 🔴 CAMBIA ESTA IMAGEN POR LA TUYA -->
-                        <img src="https://images.unsplash.com/photo-1611606063065-ee7946f0787a?w=600&h=350&fit=crop" 
-                             alt="Bot Básico Discord" class="project-image">
-                        <div class="project-image-overlay">
-                            <svg viewBox="0 0 24 24"><path d="M22 12l-10 7-10-7 10-7 10 7z" fill="white" opacity="0.8"/></svg>
-                        </div>
-                    </div>
-                    <div class="project-card-content">
-                        <h3 class="project-title">🤖 Bot de Discord (Básico)</h3>
-                        <p class="project-description">
-                            ✅ Comandos personalizados (hasta 10)<br>
-                            ✅ Sistema de bienvenida<br>
-                            ✅ Moderación básica (kick/ban)<br>
-                            ✅ Respuestas automáticas<br>
-                            ✅ Hosting 24/7 (1 mes)<br>
-                            🎯 Ideal para: Comunidades pequeñas, servidores de amigos
-                        </p>
-                        <div class="project-tech">
-                            <span>Node.js</span>
-                            <span>discord.js</span>
-                        </div>
-                        <div class="project-links">
-                            <button class="link-btn accent btn-cotizar-modal" data-paquete="Bot de Discord (Básico)">
-                                Cotizar paquete 💰
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bot Paquete 2: Bot Intermedio -->
-                <div class="project-card" data-category="bots">
-                    <div class="project-image-container">
-                        <!-- 🔴 CAMBIA ESTA IMAGEN POR LA TUYA -->
-                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&h=350&fit=crop" 
-                             alt="Bot Intermedio Discord" class="project-image">
-                        <div class="project-image-overlay">
-                            <svg viewBox="0 0 24 24"><path d="M22 12l-10 7-10-7 10-7 10 7z" fill="white" opacity="0.8"/></svg>
-                        </div>
-                    </div>
-                    <div class="project-card-content">
-                        <h3 class="project-title">🤖 Bot de Discord (Intermedio)</h3>
-                        <p class="project-description">
-                            ✅ Comandos ilimitados<br>
-                            ✅ Sistema de tickets de soporte<br>
-                            ✅ Moderación avanzada con logs<br>
-                            ✅ Sistema de niveles/ranking<br>
-                            ✅ Base de datos para configuraciones<br>
-                            🎯 Ideal para: Comunidades medianas, servidores de gaming
-                        </p>
-                        <div class="project-tech">
-                            <span>Node.js</span>
-                            <span>discord.js</span>
-                            <span>MongoDB</span>
-                        </div>
-                        <div class="project-links">
-                            <button class="link-btn accent btn-cotizar-modal" data-paquete="Bot de Discord (Intermedio)">
-                                Cotizar paquete 💰
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bot Paquete 3: Bot Avanzado -->
-                <div class="project-card" data-category="bots">
-                    <div class="project-image-container">
-                        <!-- 🔴 CAMBIA ESTA IMAGEN POR LA TUYA -->
-                        <img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=600&h=350&fit=crop" 
-                             alt="Bot Avanzado Discord" class="project-image">
-                        <div class="project-image-overlay">
-                            <svg viewBox="0 0 24 24"><path d="M22 12l-10 7-10-7 10-7 10 7z" fill="white" opacity="0.8"/></svg>
-                        </div>
-                    </div>
-                    <div class="project-card-content">
-                        <h3 class="project-title">🤖 Bot de Discord (Avanzado)</h3>
-                        <p class="project-description">
-                            ✅ Dashboard web para administración<br>
-                            ✅ Sistema de economía virtual<br>
-                            ✅ Integración con APIs externas<br>
-                            ✅ Música 24/7 con playlists<br>
-                            ✅ Panel de estadísticas y analytics<br>
-                            🎯 Ideal para: Grandes comunidades, servidores profesionales
-                        </p>
-                        <div class="project-tech">
-                            <span>Node.js</span>
-                            <span>discord.js</span>
-                            <span>React</span>
-                            <span>MongoDB</span>
-                        </div>
-                        <div class="project-links">
-                            <button class="link-btn accent btn-cotizar-modal" data-paquete="Bot de Discord (Avanzado)">
-                                Cotizar paquete 💰
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ============================================ -->
-                <!-- 📱 APPS MÓVILES (3 paquetes) -->
-                <!-- ============================================ -->
-
-                <!-- App Paquete 1: App Básica -->
-                <div class="project-card" data-category="mobile">
-                    <div class="project-image-container">
-                        <!-- 🔴 CAMBIA ESTA IMAGEN POR LA TUYA -->
-                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=350&fit=crop" 
-                             alt="App Móvil Básica" class="project-image">
-                        <div class="project-image-overlay">
-                            <svg viewBox="0 0 24 24"><path d="M22 12l-10 7-10-7 10-7 10 7z" fill="white" opacity="0.8"/></svg>
-                        </div>
-                    </div>
-                    <div class="project-card-content">
-                        <h3 class="project-title">📱 App Móvil (Básica)</h3>
-                        <p class="project-description">
-                            ✅ App de 1-3 pantallas<br>
-                            ✅ Diseño responsive nativo<br>
-                            ✅ Publicación en 1 tienda<br>
-                            ✅ Icono y splash screen<br>
-                            ✅ Soporte técnico (1 mes)<br>
-                            🎯 Ideal para: MVP, apps informativas, catálogos
-                        </p>
-                        <div class="project-tech">
-                            <span>React Native</span>
-                            <span>Expo</span>
-                        </div>
-                        <div class="project-links">
-                            <button class="link-btn accent btn-cotizar-modal" data-paquete="App Móvil (Básica)">
-                                Cotizar paquete 💰
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- App Paquete 2: App Intermedia -->
-                <div class="project-card" data-category="mobile">
-                    <div class="project-image-container">
-                        <!-- 🔴 CAMBIA ESTA IMAGEN POR LA TUYA -->
-                        <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?w=600&h=350&fit=crop" 
-                             alt="App Móvil Intermedia" class="project-image">
-                        <div class="project-image-overlay">
-                            <svg viewBox="0 0 24 24"><path d="M22 12l-10 7-10-7 10-7 10 7z" fill="white" opacity="0.8"/></svg>
-                        </div>
-                    </div>
-                    <div class="project-card-content">
-                        <h3 class="project-title">📱 App Móvil (Intermedia)</h3>
-                        <p class="project-description">
-                            ✅ App de 5-10 pantallas<br>
-                            ✅ Autenticación de usuarios<br>
-                            ✅ Base de datos en la nube<br>
-                            ✅ Notificaciones push<br>
-                            ✅ Publicación en App Store y Google Play<br>
-                            🎯 Ideal para: E-commerce, apps de servicios, redes sociales simples
-                        </p>
-                        <div class="project-tech">
-                            <span>React Native</span>
-                            <span>Firebase</span>
-                            <span>Node.js</span>
-                        </div>
-                        <div class="project-links">
-                            <button class="link-btn accent btn-cotizar-modal" data-paquete="App Móvil (Intermedia)">
-                                Cotizar paquete 💰
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- App Paquete 3: App Avanzada -->
-                <div class="project-card" data-category="mobile">
-                    <div class="project-image-container">
-                        <!-- 🔴 CAMBIA ESTA IMAGEN POR LA TUYA -->
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=350&fit=crop" 
-                             alt="App Móvil Avanzada" class="project-image">
-                        <div class="project-image-overlay">
-                            <svg viewBox="0 0 24 24"><path d="M22 12l-10 7-10-7 10-7 10 7z" fill="white" opacity="0.8"/></svg>
-                        </div>
-                    </div>
-                    <div class="project-card-content">
-                        <h3 class="project-title">📱 App Móvil (Avanzada)</h3>
-                        <p class="project-description">
-                            ✅ App multi-plataforma completa<br>
-                            ✅ Chat en tiempo real<br>
-                            ✅ Pasarela de pagos integrada<br>
-                            ✅ Geolocalización y mapas<br>
-                            ✅ Panel admin web incluido<br>
-                            🎯 Ideal para: Apps tipo Uber, marketplaces, plataformas completas
-                        </p>
-                        <div class="project-tech">
-                            <span>React Native</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                            <span>Socket.io</span>
-                        </div>
-                        <div class="project-links">
-                            <button class="link-btn accent btn-cotizar-modal" data-paquete="App Móvil (Avanzada)">
-                                Cotizar paquete 💰
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </section>
 
-        <!-- MODAL DE COTIZACIÓN -->
-        <div id="modal-cotizar" class="modal-overlay" style="display: none;">
-            <div class="modal-content">
-                <button id="close-modal" class="close-btn">&times;</button>
-                <h3 class="section-title" style="font-size: 1.6rem; margin-bottom: 0.5rem;">Solicitar Cotización</h3>
-                <p id="modal-paquete-nombre" style="color: #00f2fe; font-weight: bold; margin-bottom: 1.5rem; text-align: center; font-size: 1.1rem;"></p>
-                
-                <form id="modal-contact-form">
-                    <input type="hidden" id="modal-form-paquete" name="paquete">
-                    
-                    <div style="margin-bottom: 1rem;">
-                        <input type="text" id="modal-form-name" placeholder="Tu Nombre *" required>
+            <!-- Web - Avanzado - $500+ USD -->
+            <div class="project-card" data-category="web">
+                <div class="project-image-container">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=350&fit=crop" 
+                         alt="Web App Full Stack" class="project-image">
+                    <div class="project-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
                     </div>
-                    
-                    <div style="margin-bottom: 1rem;">
-                        <input type="email" id="modal-form-email" placeholder="Tu Correo Electrónico *" required>
+                    <div class="project-tier-badge tier-avanzado">AVANZADO</div>
+                </div>
+                <div class="project-card-content">
+                    <h3 class="project-title">🌐 Web App Full Stack</h3>
+                    <div class="project-price">$500+ <span>USD</span></div>
+                    <p class="project-description">
+                        Aplicación web completa con stack MERN. Sistema de usuarios, base de datos y API RESTful.
+                    </p>
+                    <ul class="package-features">
+                        <li><i class="fa-solid fa-check"></i> Aplicación web completa</li>
+                        <li><i class="fa-solid fa-check"></i> Sistema de usuarios y roles</li>
+                        <li><i class="fa-solid fa-check"></i> Panel de administración</li>
+                        <li><i class="fa-solid fa-check"></i> Base de datos (MongoDB)</li>
+                        <li><i class="fa-solid fa-check"></i> API RESTful</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                        <span>Express</span>
                     </div>
+                    <div class="project-links">
+                        <button class="btn-primary btn-full btn-cotizar-modal" data-paquete="Web App Full Stack" data-nivel="Avanzado" data-precio="500+ USD">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Cotizar Paquete
+                            <span class="btn-shine"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-                    <div style="margin-bottom: 1rem;">
-                        <input type="text" id="modal-form-discord" placeholder="Tu Discord (opcional)">
-                    </div>
+            <!-- ============================================ -->
+            <!-- 🤖 BOTS DE DISCORD -->
+            <!-- ============================================ -->
 
-                    <div style="margin-bottom: 1.5rem;">
-                        <textarea id="modal-form-message" rows="4" placeholder="Cuéntame los detalles de tu proyecto, ideas, presupuesto..."></textarea>
+            <!-- Bot - Básico - $50 USD -->
+            <div class="project-card" data-category="bots">
+                <div class="project-image-container">
+                    <img src="https://images.unsplash.com/photo-1611606063065-ee7946f0787a?w=600&h=350&fit=crop" 
+                         alt="Bot Básico" class="project-image">
+                    <div class="project-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
                     </div>
+                    <div class="project-tier-badge tier-basico">BÁSICO</div>
+                </div>
+                <div class="project-card-content">
+                    <h3 class="project-title">🤖 Bot de Discord Básico</h3>
+                    <div class="project-price">$50 <span>USD</span></div>
+                    <p class="project-description">
+                        Bot personalizado con comandos esenciales y sistema de bienvenida para tu comunidad.
+                    </p>
+                    <ul class="package-features">
+                        <li><i class="fa-solid fa-check"></i> Hasta 10 comandos</li>
+                        <li><i class="fa-solid fa-check"></i> Sistema de bienvenida</li>
+                        <li><i class="fa-solid fa-check"></i> Moderación básica</li>
+                        <li><i class="fa-solid fa-check"></i> Respuestas automáticas</li>
+                        <li><i class="fa-solid fa-check"></i> Hosting 24/7 (1 mes)</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Node.js</span>
+                        <span>discord.js</span>
+                    </div>
+                    <div class="project-links">
+                        <button class="btn-primary btn-full btn-cotizar-modal" data-paquete="Bot de Discord Básico" data-nivel="Básico" data-precio="50 USD">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Cotizar Paquete
+                            <span class="btn-shine"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-                    <button type="submit" id="modal-submit-btn" class="link-btn accent" style="width: 100%; cursor: pointer; padding: 1rem; font-size: 1.1rem;">
-                        Enviar Solicitud 🚀
-                    </button>
-                </form>
+            <!-- Bot - Intermedio - $150 USD -->
+            <div class="project-card" data-category="bots">
+                <div class="project-image-container">
+                    <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&h=350&fit=crop" 
+                         alt="Bot Intermedio" class="project-image">
+                    <div class="project-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                    <div class="project-tier-badge tier-intermedio">INTERMEDIO</div>
+                </div>
+                <div class="project-card-content">
+                    <h3 class="project-title">🤖 Bot de Discord Intermedio</h3>
+                    <div class="project-price">$150 <span>USD</span></div>
+                    <p class="project-description">
+                        Bot avanzado con sistema de tickets, moderación completa y base de datos.
+                    </p>
+                    <ul class="package-features">
+                        <li><i class="fa-solid fa-check"></i> Comandos ilimitados</li>
+                        <li><i class="fa-solid fa-check"></i> Sistema de tickets</li>
+                        <li><i class="fa-solid fa-check"></i> Moderación con logs</li>
+                        <li><i class="fa-solid fa-check"></i> Sistema de niveles</li>
+                        <li><i class="fa-solid fa-check"></i> Base de datos MongoDB</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Node.js</span>
+                        <span>discord.js</span>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="project-links">
+                        <button class="btn-primary btn-full btn-cotizar-modal" data-paquete="Bot de Discord Intermedio" data-nivel="Intermedio" data-precio="150 USD">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Cotizar Paquete
+                            <span class="btn-shine"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bot - Avanzado - $500+ USD -->
+            <div class="project-card" data-category="bots">
+                <div class="project-image-container">
+                    <img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=600&h=350&fit=crop" 
+                         alt="Bot Avanzado" class="project-image">
+                    <div class="project-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                    <div class="project-tier-badge tier-avanzado">AVANZADO</div>
+                </div>
+                <div class="project-card-content">
+                    <h3 class="project-title">🤖 Bot de Discord Avanzado</h3>
+                    <div class="project-price">$500+ <span>USD</span></div>
+                    <p class="project-description">
+                        Bot profesional con dashboard web, economía virtual e integración con APIs externas.
+                    </p>
+                    <ul class="package-features">
+                        <li><i class="fa-solid fa-check"></i> Dashboard web admin</li>
+                        <li><i class="fa-solid fa-check"></i> Economía virtual</li>
+                        <li><i class="fa-solid fa-check"></i> APIs externas</li>
+                        <li><i class="fa-solid fa-check"></i> Música 24/7</li>
+                        <li><i class="fa-solid fa-check"></i> Panel de estadísticas</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Node.js</span>
+                        <span>discord.js</span>
+                        <span>React</span>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="project-links">
+                        <button class="btn-primary btn-full btn-cotizar-modal" data-paquete="Bot de Discord Avanzado" data-nivel="Avanzado" data-precio="500+ USD">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Cotizar Paquete
+                            <span class="btn-shine"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================ -->
+            <!-- 📱 APPS MÓVILES -->
+            <!-- ============================================ -->
+
+            <!-- App - Básica - $50 USD -->
+            <div class="project-card" data-category="mobile">
+                <div class="project-image-container">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=350&fit=crop" 
+                         alt="App Básica" class="project-image">
+                    <div class="project-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                    <div class="project-tier-badge tier-basico">BÁSICO</div>
+                </div>
+                <div class="project-card-content">
+                    <h3 class="project-title">📱 App Móvil Básica</h3>
+                    <div class="project-price">$50 <span>USD</span></div>
+                    <p class="project-description">
+                        App simple de 1-3 pantallas ideal para MVP, apps informativas o catálogos.
+                    </p>
+                    <ul class="package-features">
+                        <li><i class="fa-solid fa-check"></i> 1-3 pantallas</li>
+                        <li><i class="fa-solid fa-check"></i> Diseño nativo</li>
+                        <li><i class="fa-solid fa-check"></i> Publicación 1 tienda</li>
+                        <li><i class="fa-solid fa-check"></i> Icono y splash</li>
+                        <li><i class="fa-solid fa-check"></i> Soporte 1 mes</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>React Native</span>
+                        <span>Expo</span>
+                    </div>
+                    <div class="project-links">
+                        <button class="btn-primary btn-full btn-cotizar-modal" data-paquete="App Móvil Básica" data-nivel="Básico" data-precio="50 USD">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Cotizar Paquete
+                            <span class="btn-shine"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App - Intermedia - $150 USD -->
+            <div class="project-card" data-category="mobile">
+                <div class="project-image-container">
+                    <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?w=600&h=350&fit=crop" 
+                         alt="App Intermedia" class="project-image">
+                    <div class="project-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                    <div class="project-tier-badge tier-intermedio">INTERMEDIO</div>
+                </div>
+                <div class="project-card-content">
+                    <h3 class="project-title">📱 App Móvil Intermedia</h3>
+                    <div class="project-price">$150 <span>USD</span></div>
+                    <p class="project-description">
+                        App con autenticación, base de datos en la nube y notificaciones push.
+                    </p>
+                    <ul class="package-features">
+                        <li><i class="fa-solid fa-check"></i> 5-10 pantallas</li>
+                        <li><i class="fa-solid fa-check"></i> Autenticación usuarios</li>
+                        <li><i class="fa-solid fa-check"></i> Base de datos cloud</li>
+                        <li><i class="fa-solid fa-check"></i> Notificaciones push</li>
+                        <li><i class="fa-solid fa-check"></i> App Store + Google Play</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>React Native</span>
+                        <span>Firebase</span>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="project-links">
+                        <button class="btn-primary btn-full btn-cotizar-modal" data-paquete="App Móvil Intermedia" data-nivel="Intermedio" data-precio="150 USD">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Cotizar Paquete
+                            <span class="btn-shine"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App - Avanzada - $500+ USD -->
+            <div class="project-card" data-category="mobile">
+                <div class="project-image-container">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=350&fit=crop" 
+                         alt="App Avanzada" class="project-image">
+                    <div class="project-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                    <div class="project-tier-badge tier-avanzado">AVANZADO</div>
+                </div>
+                <div class="project-card-content">
+                    <h3 class="project-title">📱 App Móvil Avanzada</h3>
+                    <div class="project-price">$500+ <span>USD</span></div>
+                    <p class="project-description">
+                        App multi-plataforma completa con chat en tiempo real y pasarela de pagos.
+                    </p>
+                    <ul class="package-features">
+                        <li><i class="fa-solid fa-check"></i> App multiplataforma</li>
+                        <li><i class="fa-solid fa-check"></i> Chat en tiempo real</li>
+                        <li><i class="fa-solid fa-check"></i> Pasarela de pagos</li>
+                        <li><i class="fa-solid fa-check"></i> Geolocalización</li>
+                        <li><i class="fa-solid fa-check"></i> Panel admin web</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>React Native</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                        <span>Socket.io</span>
+                    </div>
+                    <div class="project-links">
+                        <button class="btn-primary btn-full btn-cotizar-modal" data-paquete="App Móvil Avanzada" data-nivel="Avanzado" data-precio="500+ USD">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Cotizar Paquete
+                            <span class="btn-shine"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta">
+        <div class="cta-content">
+            <h2 class="cta-title">¿No encuentras lo que <span class="gradient-text">Buscas</span>?</h2>
+            <p class="cta-description">
+                Contáctame para un paquete personalizado a la medida de tus necesidades específicas.
+            </p>
+            <div class="cta-buttons">
+                <a href="index.html#contact" class="btn-primary">
+                    <i class="fa-solid fa-envelope"></i>
+                    Contactar Ahora
+                    <span class="btn-shine"></span>
+                </a>
+                <a href="index.html#projects" class="btn-secondary">
+                    <i class="fa-solid fa-folder-open"></i>
+                    Ver Portafolio
+                </a>
             </div>
         </div>
-    </main>
+        <div class="cta-visual">
+            <div class="cta-orb"></div>
+            <div class="cta-orb-small"></div>
+        </div>
+    </section>
 
-    <!-- PIE DE PÁGINA -->
-    <footer>
-        <p>&copy; 2026 MisterX/DEV. Todos los derechos reservados.</p>
+    <!-- MODAL DE COTIZACIÓN PREMIUM -->
+    <div id="modal-cotizar" class="modal-overlay">
+        <div class="modal-premium">
+            <button id="close-modal" class="modal-close-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-header">
+                <div class="modal-header-icon">
+                    <div class="modal-icon-orb"></div>
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+                <h3 class="modal-title">Solicitar <span class="gradient-text">Cotización</span></h3>
+                <p id="modal-paquete-nombre" class="modal-package-name"></p>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-steps">
+                    <div class="step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <span>Información</span>
+                    </div>
+                    <div class="step-divider"></div>
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <span>Detalles</span>
+                    </div>
+                    <div class="step-divider"></div>
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <span>Confirmar</span>
+                    </div>
+                </div>
+
+                <form id="modal-contact-form" class="modal-form">
+                    <input type="hidden" id="modal-form-paquete" name="paquete">
+                    <input type="hidden" id="modal-form-precio" name="precio">
+                    <input type="hidden" id="modal-form-nivel" name="nivel">
+                    
+                    <!-- Paso 1: Información personal -->
+                    <div class="form-step active" id="step-1">
+                        <div class="input-group-premium">
+                            <div class="input-icon"><i class="fa-solid fa-user"></i></div>
+                            <input type="text" id="modal-form-name" placeholder="Tu nombre completo" required>
+                        </div>
+                        <div class="input-group-premium">
+                            <div class="input-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <input type="email" id="modal-form-email" placeholder="Tu correo electrónico" required>
+                        </div>
+                        <div class="input-group-premium">
+                            <div class="input-icon"><i class="fa-brands fa-discord"></i></div>
+                            <input type="text" id="modal-form-discord" placeholder="Tu Discord (opcional)">
+                        </div>
+                        <button type="button" class="btn-next-step btn-primary">
+                            <span>Siguiente</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <span class="btn-shine"></span>
+                        </button>
+                    </div>
+
+                    <!-- Paso 2: Detalles del proyecto -->
+                    <div class="form-step" id="step-2">
+                        <!-- Presupuesto automático -->
+                        <div class="budget-display">
+                            <label class="budget-label">Presupuesto del paquete</label>
+                            <div class="budget-auto-card">
+                                <div class="budget-auto-icon">
+                                    <i class="fa-solid fa-tag"></i>
+                                </div>
+                                <div class="budget-auto-info">
+                                    <span class="budget-auto-package" id="budget-package-name">-</span>
+                                    <span class="budget-auto-price" id="budget-auto-price">-</span>
+                                </div>
+                                <div class="budget-auto-badge" id="budget-auto-badge">-</div>
+                            </div>
+                        </div>
+
+                        <div class="input-group-premium">
+                            <div class="input-icon"><i class="fa-solid fa-clock"></i></div>
+                            <select id="modal-form-timeline" class="premium-select">
+                                <option value="">Tiempo estimado de entrega</option>
+                                <option value="1-2 semanas">1-2 semanas</option>
+                                <option value="2-4 semanas">2-4 semanas</option>
+                                <option value="1-2 meses">1-2 meses</option>
+                                <option value="2+ meses">Más de 2 meses</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group-premium">
+                            <div class="input-icon"><i class="fa-solid fa-message"></i></div>
+                            <textarea id="modal-form-message" rows="3" placeholder="Describe brevemente tu proyecto, ideas o requerimientos especiales..."></textarea>
+                        </div>
+
+                        <div class="step-buttons">
+                            <button type="button" class="btn-prev-step btn-secondary">
+                                <i class="fa-solid fa-arrow-left"></i>
+                                <span>Atrás</span>
+                            </button>
+                            <button type="button" class="btn-next-step btn-primary">
+                                <span>Siguiente</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <span class="btn-shine"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Paso 3: Confirmación -->
+                    <div class="form-step" id="step-3">
+                        <div class="confirmation-card">
+                            <div class="confirmation-icon">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                            <h4>Resumen de tu solicitud</h4>
+                            <div class="summary-list">
+                                <div class="summary-item">
+                                    <span class="summary-label">Paquete</span>
+                                    <span class="summary-value" id="summary-package">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">Nivel</span>
+                                    <span class="summary-value" id="summary-nivel">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">Precio</span>
+                                    <span class="summary-value summary-price" id="summary-budget">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">Nombre</span>
+                                    <span class="summary-value" id="summary-name">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">Email</span>
+                                    <span class="summary-value" id="summary-email">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">Tiempo</span>
+                                    <span class="summary-value" id="summary-timeline">-</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step-buttons">
+                            <button type="button" class="btn-prev-step btn-secondary">
+                                <i class="fa-solid fa-arrow-left"></i>
+                                <span>Atrás</span>
+                            </button>
+                            <button type="submit" id="modal-submit-btn" class="btn-primary">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Enviar Solicitud</span>
+                                <span class="btn-shine"></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <div class="modal-guarantee">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Respuesta en menos de 24 horas</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="logo-icon footer-logo-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="logo-text-container">
+                        <span class="logo-text">MisterX</span>
+                        <span class="logo-accent">/DEV</span>
+                    </div>
+                </div>
+                <p>Desarrollador Web Freelance & Creador de Bots</p>
+                <div class="footer-social">
+                    <a href="https://discord.com/users/1008794684958703769" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                    <a href="https://github.com/ELMRX" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Paquetes</h4>
+                <a href="#" class="footer-filter-link" data-filter="web">Desarrollo Web</a>
+                <a href="#" class="footer-filter-link" data-filter="bots">Bots Discord</a>
+                <a href="#" class="footer-filter-link" data-filter="mobile">Apps Móviles</a>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces</h4>
+                <a href="index.html#about">Sobre mí</a>
+                <a href="index.html#projects">Proyectos</a>
+                <a href="index.html#contact">Contacto</a>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <a href="#">Términos</a>
+                <a href="#">Privacidad</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ramiro Alarcón - MisterX/DEV. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // ============================================
+        // ⚠️ CONFIGURACIÓN - WEBHOOK DE DISCORD
+        // ============================================
+        const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1528575837685809293/75dvRv5Sz8dSynz1eas7lOtGJKawoFcxVxkxyJshXfBGpcB55IODnO4IRw6ZIyU0j0Hd';
+        
+        // ============================================
+        // FILTRO DE PAQUETES
+        // ============================================
+        const filterButtons = document.querySelectorAll('.filtros-grid .btn-modo-premium');
+        const packageCards = document.querySelectorAll('.project-card');
+
+        function filterPackages(category) {
+            packageCards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                if (cardCategory === category) {
+                    card.style.display = 'flex';
+                    card.style.animation = 'fadeInUp 0.5s ease forwards';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                filterButtons.forEach(btn => btn.classList.remove('activo'));
+                this.classList.add('activo');
+                const filterValue = this.getAttribute('data-filter');
+                filterPackages(filterValue);
+            });
+        });
+
+        // Al cargar: mostrar solo el primer filtro activo
+        const activeButton = document.querySelector('.filtros-grid .btn-modo-premium.activo');
+        if (activeButton) {
+            filterPackages(activeButton.getAttribute('data-filter'));
+        }
+
+        // Footer filter links
+        document.querySelectorAll('.footer-filter-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const filter = this.getAttribute('data-filter');
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('activo');
+                    if (btn.getAttribute('data-filter') === filter) {
+                        btn.classList.add('activo');
+                    }
+                });
+                filterPackages(filter);
+                document.getElementById('paquetes').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // ============================================
+        // MODAL DE COTIZACIÓN PREMIUM
+        // ============================================
+        const modal = document.getElementById('modal-cotizar');
+        const closeModal = document.getElementById('close-modal');
+        const cotizarButtons = document.querySelectorAll('.btn-cotizar-modal');
+        const modalPaqueteNombre = document.getElementById('modal-paquete-nombre');
+        const modalFormPaquete = document.getElementById('modal-form-paquete');
+        const modalFormPrecio = document.getElementById('modal-form-precio');
+        const modalFormNivel = document.getElementById('modal-form-nivel');
+
+        let currentStep = 1;
+        const totalSteps = 3;
+        const formSteps = document.querySelectorAll('.form-step');
+        const stepIndicators = document.querySelectorAll('.step');
+        const nextButtons = document.querySelectorAll('.btn-next-step');
+        const prevButtons = document.querySelectorAll('.btn-prev-step');
+        let currentPackagePrice = '';
+        let currentPackageLevel = '';
+
+        // Abrir modal con datos del paquete
+        cotizarButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const paquete = this.getAttribute('data-paquete');
+                const nivel = this.getAttribute('data-nivel');
+                const precio = this.getAttribute('data-precio');
+                
+                // Guardar datos
+                currentPackagePrice = precio;
+                currentPackageLevel = nivel;
+                
+                // Actualizar campos ocultos
+                if (modalPaqueteNombre) modalPaqueteNombre.textContent = '📦 ' + paquete;
+                if (modalFormPaquete) modalFormPaquete.value = paquete;
+                if (modalFormPrecio) modalFormPrecio.value = precio;
+                if (modalFormNivel) modalFormNivel.value = nivel;
+                
+                // Actualizar display de presupuesto
+                updateBudgetDisplay(paquete, nivel, precio);
+                
+                goToStep(1);
+                resetFormFields();
+                modal.classList.add('open');
+            });
+        });
+
+        // Cerrar modal
+        if (closeModal) closeModal.addEventListener('click', () => modal.classList.remove('open'));
+        modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('open'); });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('open')) modal.classList.remove('open');
+        });
+
+        // Navegación de pasos
+        function goToStep(step) {
+            currentStep = step;
+            formSteps.forEach(s => s.classList.remove('active'));
+            const stepElement = document.getElementById('step-' + step);
+            if (stepElement) stepElement.classList.add('active');
+            
+            stepIndicators.forEach((indicator, index) => {
+                indicator.classList.remove('active', 'completed');
+                if (index + 1 === step) indicator.classList.add('active');
+                else if (index + 1 < step) indicator.classList.add('completed');
+            });
+            
+            if (step === 3) fillSummary();
+        }
+
+        nextButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (validateStep(currentStep) && currentStep < totalSteps) {
+                    goToStep(currentStep + 1);
+                }
+            });
+        });
+
+        prevButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (currentStep > 1) goToStep(currentStep - 1);
+            });
+        });
+
+        function validateStep(step) {
+            if (step === 1) {
+                const name = document.getElementById('modal-form-name').value.trim();
+                const email = document.getElementById('modal-form-email').value.trim();
+                if (!name) { alert('⚠️ Por favor ingresa tu nombre.'); return false; }
+                if (!email || !email.includes('@')) { alert('⚠️ Por favor ingresa un correo electrónico válido.'); return false; }
+                return true;
+            }
+            return true;
+        }
+
+        // Actualizar display de presupuesto
+        function updateBudgetDisplay(paquete, nivel, precio) {
+            const budgetPackageName = document.getElementById('budget-package-name');
+            const budgetAutoPrice = document.getElementById('budget-auto-price');
+            const budgetAutoBadge = document.getElementById('budget-auto-badge');
+            
+            if (budgetPackageName) budgetPackageName.textContent = paquete;
+            if (budgetAutoPrice) budgetAutoPrice.textContent = '$' + precio;
+            if (budgetAutoBadge) {
+                budgetAutoBadge.textContent = nivel;
+                // Asignar clase según nivel
+                budgetAutoBadge.className = 'budget-auto-badge';
+                if (nivel === 'Básico') budgetAutoBadge.classList.add('tier-basico');
+                if (nivel === 'Intermedio') budgetAutoBadge.classList.add('tier-intermedio');
+                if (nivel === 'Avanzado') budgetAutoBadge.classList.add('tier-avanzado');
+            }
+        }
+
+        function fillSummary() {
+            const paquete = document.getElementById('modal-form-paquete').value || '-';
+            const nivel = document.getElementById('modal-form-nivel').value || '-';
+            const precio = document.getElementById('modal-form-precio').value || '-';
+            const nombre = document.getElementById('modal-form-name').value.trim() || '-';
+            const email = document.getElementById('modal-form-email').value.trim() || '-';
+            const timeline = document.getElementById('modal-form-timeline').value || 'No especificado';
+            
+            document.getElementById('summary-package').textContent = paquete;
+            document.getElementById('summary-nivel').textContent = nivel;
+            document.getElementById('summary-budget').textContent = '$' + precio;
+            document.getElementById('summary-name').textContent = nombre;
+            document.getElementById('summary-email').textContent = email;
+            document.getElementById('summary-timeline').textContent = timeline;
+        }
+
+        function resetFormFields() {
+            document.getElementById('modal-contact-form').reset();
+            const submitBtn = document.getElementById('modal-submit-btn');
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i><span>Enviar Solicitud</span><span class="btn-shine"></span>';
+            submitBtn.style.background = '';
+            
+            // Resetear display
+            const budgetPackageName = document.getElementById('budget-package-name');
+            const budgetAutoPrice = document.getElementById('budget-auto-price');
+            const budgetAutoBadge = document.getElementById('budget-auto-badge');
+            if (budgetPackageName) budgetPackageName.textContent = '-';
+            if (budgetAutoPrice) budgetAutoPrice.textContent = '-';
+            if (budgetAutoBadge) {
+                budgetAutoBadge.textContent = '-';
+                budgetAutoBadge.className = 'budget-auto-badge';
+            }
+        }
+
+        // ============================================
+        // ENVIAR A DISCORD - EMBED ESTÉTICO
+        // ============================================
+        const modalForm = document.getElementById('modal-contact-form');
+
+        if (modalForm) {
+            modalForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const submitBtn = document.getElementById('modal-submit-btn');
+                
+                // Validar
+                if (!validateStep(1)) {
+                    goToStep(1);
+                    return;
+                }
+                
+                // Efecto de carga
+                submitBtn.classList.add('btn-loading');
+                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>Enviando...</span>';
+                submitBtn.disabled = true;
+                
+                // Obtener datos
+                const paquete = document.getElementById('modal-form-paquete').value;
+                const precio = document.getElementById('modal-form-precio').value;
+                const nivel = document.getElementById('modal-form-nivel').value;
+                const name = document.getElementById('modal-form-name').value.trim();
+                const email = document.getElementById('modal-form-email').value.trim();
+                const discord = document.getElementById('modal-form-discord').value.trim();
+                const timeline = document.getElementById('modal-form-timeline').value;
+                const message = document.getElementById('modal-form-message').value.trim();
+                
+                // Colores según nivel
+                const levelColors = {
+                    'Básico': 0xa855f7,
+                    'Intermedio': 0x3b82f6,
+                    'Avanzado': 0xf59e0b
+                };
+                const embedColor = levelColors[nivel] || 0xa855f7;
+                
+                // Emojis según nivel
+                const levelEmojis = {
+                    'Básico': '🟣',
+                    'Intermedio': '🔵',
+                    'Avanzado': '🟡'
+                };
+                const levelEmoji = levelEmojis[nivel] || '📦';
+                
+                // Crear embed ESTÉTICO para Discord
+                const embed = {
+                    embeds: [{
+                        title: `${levelEmoji} Nueva Solicitud de Cotización`,
+                        description: `**${name}** ha solicitado una cotización para un paquete.`,
+                        color: embedColor,
+                        thumbnail: {
+                            url: 'https://cdn-icons-png.flaticon.com/512/6295/6295417.png'
+                        },
+                        fields: [
+                            {
+                                name: '📋 **Información del Paquete**',
+                                value: [
+                                    `> **Paquete:** ${paquete}`,
+                                    `> **Nivel:** ${nivel}`,
+                                    `> **Precio:** $${precio}`,
+                                    `> **Tiempo estimado:** ${timeline || 'No especificado'}`
+                                ].join('\n'),
+                                inline: false
+                            },
+                            {
+                                name: '👤 **Datos del Cliente**',
+                                value: [
+                                    `> **Nombre:** ${name}`,
+                                    `> **Email:** ${email}`,
+                                    `> **Discord:** ${discord || 'No especificado'}`
+                                ].join('\n'),
+                                inline: false
+                            },
+                            {
+                                name: '💬 **Mensaje del Cliente**',
+                                value: `>>> ${message || 'Sin detalles adicionales'}`,
+                                inline: false
+                            }
+                        ],
+                        footer: {
+                            text: 'MisterX/DEV • Sistema de Cotizaciones',
+                            icon_url: 'https://cdn-icons-png.flaticon.com/512/6295/6295417.png'
+                        },
+                        timestamp: new Date().toISOString()
+                    }]
+                };
+                
+                try {
+                    const response = await fetch(DISCORD_WEBHOOK_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(embed)
+                    });
+                    
+                    if (response.ok) {
+                        // Éxito
+                        submitBtn.classList.remove('btn-loading');
+                        submitBtn.innerHTML = '<i class="fa-solid fa-circle-check"></i><span>¡Enviado con Éxito!</span>';
+                        submitBtn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+                        
+                        setTimeout(() => {
+                            alert('✅ ¡Solicitud enviada con éxito!\n\nGracias ' + name + ', revisaré tu solicitud y te contactaré pronto a través de Discord o Email.');
+                            resetFormFields();
+                            modal.classList.remove('open');
+                            goToStep(1);
+                        }, 1500);
+                    } else {
+                        throw new Error('Error al enviar a Discord');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    submitBtn.classList.remove('btn-loading');
+                    submitBtn.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i><span>Error al enviar</span>';
+                    submitBtn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+                    
+                    setTimeout(() => {
+                        alert('❌ Hubo un error al enviar la solicitud. Por favor contáctame directamente por Discord: @misterx_dev');
+                        submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i><span>Enviar Solicitud</span><span class="btn-shine"></span>';
+                        submitBtn.style.background = '';
+                        submitBtn.disabled = false;
+                    }, 2000);
+                }
+            });
+        }
+
+        // ============================================
+        // PARALLAX FLOATING CARDS
+        // ============================================
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.floating-card');
+            const mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+            const mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+            cards.forEach((card, index) => {
+                const factor = (index + 1) * 8;
+                card.style.transform = `translate(${mouseX * factor}px, ${mouseY * factor}px)`;
+            });
+        });
+
+        // ============================================
+        // ANIMACIÓN SCROLL
+        // ============================================
+        const animateOnScroll = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.project-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+            animateOnScroll.observe(el);
+        });
+    </script>
 </body>
 </html>
